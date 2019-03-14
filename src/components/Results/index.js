@@ -6,6 +6,7 @@ function Result() {
     return (
         <>
             <div className="results-header" />
+            <div />
             <div className="results-content" />
             <div className="results-footer" />
         </>
