@@ -1,0 +1,18 @@
+// out: ./home.css, compress: false, sourceMap: false
+
+@borderstyle: 1px solid #000;
+.home-page {
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+    .results-area {
+        border: @borderstyle;
+        text-align: left;
+        margin-right: 10px;
+        width:50%;
+    }
+    .saved-properties-area {
+        border: @borderstyle;
+        flex: 1;
+    }
+}
