@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { inject } from 'mobx-react';
+import { observer } from 'mobx-react-lite';
 import './../../less/style.less';
 import './results.less';
 
-function Result() {
+function Result({ rootStore }) {
+    useEffect(() => {
+        rootStore.formStore.getData();
+    });
     return (
         <>
             <div className="results-header" />
@@ -12,4 +17,4 @@ function Result() {
         </>
     );
 }
-export default Result;
+export default inject('rootStore')(observer(Result));
