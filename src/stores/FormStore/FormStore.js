@@ -1,5 +1,5 @@
-import { observable, action, configure } from 'mobx';
-import { reactLocalStorage } from 'reactjs-localstorage';
+import { observable, configure, flow } from 'mobx';
+import axios from 'axios';
 
 configure({ enforceActions: 'always' });
 class FormStore {
@@ -13,34 +13,28 @@ class FormStore {
         critical: 0,
         low: 0
     };
-    @observable
-    localStorageValue = [];
 
-    @action
-    updateProperty(key, value) {
-        this.formvalue[key] = value;
-    }
-    @action
-    handleConfirm() {
-        let data = {
-            name: '',
-            type: '',
-            shift: '',
-            starttime: '',
-            endtime: '',
-            critical: 0,
-            low: 0
-        };
-        for (let key of Object.keys(data)) {
-            data[key] = this.formvalue[key];
+    @observable
+    resultsData = [];
+
+    @observable
+    savedData = [];
+
+    @observable
+    state = 'pending';
+
+    getData = flow(function*() {
+        const api = '/test_data/data.json';
+        try {
+            const res = yield axios.get(api);
+            this.resultsData = res.data.results;
+            this.savedData = res.data.saved;
+            this.state = 'done';
         }
-        this.localStorageValue.push(data);
-        reactLocalStorage.setObject('FormValue', this.localStorageValue);
-    }
-    @action
-    handleSubmit() {
-        // console.log(reactLocalStorage.getObject('FormValue'));
-    }
+ catch (error) {
+            this.state = 'error';
+        }
+    });
 }
 
 export default FormStore;
