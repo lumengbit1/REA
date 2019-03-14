@@ -2,6 +2,7 @@ import React from 'react';
 import './../../less/style.less';
 import './home.less';
 import Results from './../Results';
+import Saved from './../Saved';
 
 function Home() {
     return (
@@ -10,7 +11,7 @@ function Home() {
                 <Results />
             </div>
             <div className="saved-properties-area">
-                <div className="saved-properties" />
+                <Results />
             </div>
         </div>
     );
