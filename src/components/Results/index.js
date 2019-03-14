@@ -3,6 +3,8 @@ import { inject } from 'mobx-react';
 import { observer } from 'mobx-react-lite';
 import './../../less/style.less';
 import './results.less';
+import Property from './../Property';
+import { timeout } from 'q';
 
 function Result({ rootStore }) {
     useEffect(() => {
@@ -10,10 +12,17 @@ function Result({ rootStore }) {
     });
     return (
         <>
-            <div className="results-header" />
-            <div />
-            <div className="results-content" />
-            <div className="results-footer" />
+            {rootStore.formStore.resultsData.map(item => {
+                return (
+                    <Property
+                        price={item.price}
+                        color={item.agency.brandingColors.primary}
+                        logo={item.logo}
+                        id={item.id}
+                        mainImage={timeout.mainImage}
+                    />
+                );
+            })}
         </>
     );
 }

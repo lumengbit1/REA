@@ -1,6 +1,5 @@
 import { observable, configure, flow } from 'mobx';
 import axios from 'axios';
-// import { reactLocalStorage } from 'reactjs-localstorage';
 
 configure({ enforceActions: 'always' });
 class FormStore {
@@ -14,8 +13,6 @@ class FormStore {
         critical: 0,
         low: 0
     };
-    @observable
-    localStorageValue = [];
 
     @observable
     resultsData = [];
@@ -26,12 +23,10 @@ class FormStore {
     @observable
     state = 'pending';
 
-    @observable
-    api = '/test_data/data.json';
-
     getData = flow(function*() {
+        const api = '/test_data/data.json';
         try {
-            const res = yield axios.get(this.api);
+            const res = yield axios.get(api);
             this.resultsData = res.data.results;
             this.savedData = res.data.saved;
             this.state = 'done';
