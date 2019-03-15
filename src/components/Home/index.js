@@ -1,17 +1,16 @@
 import React from 'react';
 import './../../less/style.less';
 import './home.less';
-import Results from './../Results';
-import Saved from './../Saved';
+import Card from './../Card';
 
 function Home() {
     return (
         <div className="home-page">
             <div className="results-area">
-                <Results />
+                <Card area="results" />
             </div>
             <div className="saved-properties-area">
-                <Results />
+                <Card area="saved" />
             </div>
         </div>
     );
