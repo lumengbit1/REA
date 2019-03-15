@@ -10,7 +10,7 @@ function Card({ rootStore, area }) {
     // const { area } = props;
     useEffect(() => {
         rootStore.formStore.getData();
-    });
+    }, []);
     const propertyData = area === 'results' ? rootStore.formStore.resultsData : rootStore.formStore.savedData;
 
     const LoadableProperty = Loadable({
