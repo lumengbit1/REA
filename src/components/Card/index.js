@@ -2,18 +2,28 @@ import React, { useEffect } from 'react';
 import { inject } from 'mobx-react';
 import { observer } from 'mobx-react-lite';
 import './../../less/style.less';
-import './results.less';
-import Property from './../Property';
+import './card.less';
+// import Property from './../Property';
+import Loadable from 'react-loadable';
 
-function Result({ rootStore }) {
+function Card({ rootStore, area }) {
+    // const { area } = props;
     useEffect(() => {
         rootStore.formStore.getData();
     });
+    const propertyData = area === 'results' ? rootStore.formStore.resultsData : rootStore.formStore.savedData;
+
+    const LoadableProperty = Loadable({
+        loader: () => import('./../Property'),
+        loading() {
+            return <>Loading...</>;
+        }
+    });
     return (
         <>
-            {rootStore.formStore.resultsData.map(item => {
+            {propertyData.map(item => {
                 return (
-                    <Property
+                    <LoadableProperty
                         price={item.price}
                         color={item.agency.brandingColors.primary}
                         logo={item.agency.logo}
@@ -25,4 +35,4 @@ function Result({ rootStore }) {
         </>
     );
 }
-export default inject('rootStore')(observer(Result));
+export default inject('rootStore')(observer(Card));
