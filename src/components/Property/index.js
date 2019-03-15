@@ -5,7 +5,7 @@ import './property.less';
 function Property(props) {
     const { color, logo, id, mainImage, price } = props;
     return (
-        <div className="property">
+        <>
             <div className="results-header" style={{ backgroundColor: color }}>
                 <span className="logo">
                     <img className="logo-img" src={logo} alt="logo" />
@@ -18,7 +18,8 @@ function Property(props) {
             <div className="results-footer">
                 <span>{price}</span>
             </div>
-        </div>
+            {/* <button className="btn-results">Click</button> */}
+        </>
     );
 }
 export default Property;
