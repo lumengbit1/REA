@@ -1,4 +1,5 @@
-#REA Group Code Challenge
+# REA Group Code Challenge
+
 Setup Instructions:
 1.Clone the project into local from Github.
 2.Run "npm install" to install the libraries automatically.
