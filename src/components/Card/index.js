@@ -41,6 +41,7 @@ function Card({ rootStore, area }) {
                             mainImage={item.mainImage}
                         />
                         <button
+                            data-testid="test"
                             className={btnClass}
                             onClick={() => {
                                 onClick(item.id);

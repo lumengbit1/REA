@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Route Test Route Test 1`] = `
+<div>
+  <div
+    className="App"
+  >
+    <div
+      className="home-page"
+    >
+      <div
+        className="results-area"
+      />
+      <div
+        className="saved-properties-area"
+      />
+    </div>
+  </div>
+</div>
+`;
