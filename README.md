@@ -1,5 +1,6 @@
 # REA Group Code Challenge
 
+[![](https://img.shields.io/appveyor/ci/:lumengbit1/:REA.svg)](https://img.shields.io/appveyor/ci)
 Axios adapter that allows to easily mock requests
 
 # Installation
