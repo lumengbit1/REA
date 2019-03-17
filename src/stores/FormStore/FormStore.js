@@ -4,17 +4,6 @@ import axios from 'axios';
 configure({ enforceActions: 'always' });
 class FormStore {
     @observable
-    formvalue = {
-        name: '',
-        type: '',
-        shift: '',
-        starttime: '',
-        endtime: '',
-        critical: 0,
-        low: 0
-    };
-
-    @observable
     resultsData = [];
 
     @observable

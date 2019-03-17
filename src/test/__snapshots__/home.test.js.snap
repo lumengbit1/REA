@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render Test case: expect rendering correct 1`] = `
+<div>
+  <div
+    class="home-page"
+  >
+    <div
+      class="results-area"
+    />
+    <div
+      class="saved-properties-area"
+    />
+  </div>
+</div>
+`;
