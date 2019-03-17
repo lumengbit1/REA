@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { inject } from 'mobx-react';
 import { observer } from 'mobx-react-lite';
-import './../../less/style.less';
+import '../../less/style.less';
 import './card.less';
 import Loadable from 'react-loadable';
 import classNames from 'classnames';

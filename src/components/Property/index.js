@@ -18,7 +18,6 @@ function Property(props) {
             <div className="results-footer">
                 <span>{price}</span>
             </div>
-            {/* <button className="btn-results">Click</button> */}
         </>
     );
 }

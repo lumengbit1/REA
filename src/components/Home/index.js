@@ -1,5 +1,5 @@
 import React from 'react';
-import './../../less/style.less';
+import '../../less/style.less';
 import './home.less';
 import Card from './../Card';
 

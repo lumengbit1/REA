@@ -14,10 +14,6 @@ class FormStore {
 
     @action
     addProperty(id) {
-        // let selectedData = this.resultsData.splice(
-        //     this.resultsData.indexOf(this.resultsData.find(item => item.id === id)),
-        //     1
-        // )[0];
         let selectedData = this.resultsData.find(item => item.id === id);
         this.savedData.push(selectedData);
     }
