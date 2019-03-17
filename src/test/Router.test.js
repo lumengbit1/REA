@@ -6,7 +6,6 @@ import RootStore from '../stores/RootStore';
 import { Provider } from 'mobx-react';
 
 const rootStore = new RootStore();
-
 describe('Route Test', () => {
     it('Route Test', () => {
         const component = renderer
