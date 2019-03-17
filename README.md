@@ -2,6 +2,8 @@
 
 REA Group Code Challenge
 
+# Instruction
+
 # Installation
 
 1. Clone the project into local from Github.
