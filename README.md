@@ -2,6 +2,11 @@
 
 REA Group Code Challenge
 
+# Environment
+
+-   Node v10.10.0
+-   Mobx v4.7
+
 # Installation
 
 1. Clone the project into local from Github.
