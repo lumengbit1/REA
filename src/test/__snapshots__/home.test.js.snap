@@ -7,10 +7,28 @@ exports[`Render Test case: expect rendering correct 1`] = `
   >
     <div
       class="results-area"
-    />
+    >
+      <div
+        class="title"
+      >
+        'Results'
+      </div>
+      <div
+        class="block"
+      />
+    </div>
     <div
       class="saved-properties-area"
-    />
+    >
+      <div
+        class="title"
+      >
+        'Saved Properties'
+      </div>
+      <div
+        class="block"
+      />
+    </div>
   </div>
 </div>
 `;

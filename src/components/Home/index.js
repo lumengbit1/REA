@@ -1,24 +1,26 @@
 import React from 'react';
-import '../../less/style.less';
-import './home.less';
-import Card from './../Card';
+import CSSModules from 'react-css-modules';
+import styles from './home.less';
+import PropertyList from '../PropertyList';
 
 function Home() {
     return (
-        <div className="home-page">
-            <div className="results-area">
-                <div className="title">'Results'</div>
-                <div className="block">
-                    <Card area="results" />
+        <div styleName="homePage">
+            <div styleName="resultsArea">
+                <div styleName="title">Results</div>
+                <div styleName="block">
+                    {/* <PropertyList area="results" /> */}
+                    <PropertyList area="results" btnText="Add Property" btnClass="btnresults" />
                 </div>
             </div>
-            <div className="saved-properties-area">
-                <div className="title">'Saved Properties'</div>
-                <div className="block">
-                    <Card area="saved" />
+            <div styleName="savedPropertiesArea">
+                <div styleName="title">Saved Properties</div>
+                <div styleName="block">
+                    {/* <PropertyList area="saved" /> */}
+                    <PropertyList area="saved" btnText="Remove Property" btnClass="btnsaved" />
                 </div>
             </div>
         </div>
     );
 }
-export default Home;
+export default CSSModules(Home, styles);

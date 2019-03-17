@@ -1,7 +1,7 @@
 import React from 'react';
 import RootStore from '../stores/RootStore';
 import { Provider } from 'mobx-react';
-import Card from '../components/Card';
+import PropertyList from '../components/PropertyList';
 import Property from '../components/Property';
 import sinon from 'sinon';
 import { render, fireEvent, cleanup, waitForElement } from 'react-testing-library';
@@ -14,7 +14,7 @@ describe('Render Test', function () {
     it('case: expect rendering correct', () => {
         const { container } = render(
             <Provider rootStore={rootStore}>
-                <Card />
+                <PropertyList />
             </Provider>
         );
         expect(container).toMatchSnapshot();
@@ -25,12 +25,12 @@ describe('Function Test', function () {
         const getData = sinon.stub(rootStore.formStore, 'getData');
         const { rerender } = render(
             <Provider rootStore={rootStore}>
-                <Card />
+                <PropertyList />
             </Provider>
         );
         rerender(
             <Provider rootStore={rootStore}>
-                <Card />
+                <PropertyList />
             </Provider>
         );
 
@@ -85,7 +85,7 @@ describe('Function Test', function () {
         mock.onGet('/test_data/data.json').reply(200, mockData);
         const { getByTestId } = render(
             <Provider rootStore={rootStore}>
-                <Card {...props} />
+                <PropertyList {...props} />
             </Provider>
         );
         await waitForElement(() => getByTestId('test'));
@@ -102,7 +102,7 @@ describe('Function Test', function () {
         mock.onGet('/test_data/data.json').reply(200, mockData);
         const { getByTestId } = render(
             <Provider rootStore={rootStore}>
-                <Card {...props} />
+                <PropertyList {...props} />
             </Provider>
         );
         await waitForElement(() => getByTestId('test'));
@@ -117,7 +117,7 @@ describe('Error Test', function () {
         mock.onGet('/test_data/data.json').timeout();
         render(
             <Provider rootStore={rootStore}>
-                <Card />
+                <PropertyList />
             </Provider>
         );
         await rootStore.formStore.getData();

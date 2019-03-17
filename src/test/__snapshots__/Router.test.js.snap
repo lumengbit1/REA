@@ -6,14 +6,32 @@ exports[`Route Test Route Test 1`] = `
     className="App"
   >
     <div
-      className="home-page"
+      className="homePage"
     >
       <div
-        className="results-area"
-      />
+        className="resultsArea"
+      >
+        <div
+          className="title"
+        >
+          Results
+        </div>
+        <div
+          className="block"
+        />
+      </div>
       <div
-        className="saved-properties-area"
-      />
+        className="savedPropertiesArea"
+      >
+        <div
+          className="title"
+        >
+          Saved Properties
+        </div>
+        <div
+          className="block"
+        />
+      </div>
     </div>
   </div>
 </div>

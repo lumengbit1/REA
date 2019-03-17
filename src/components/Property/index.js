@@ -1,24 +1,24 @@
 import React from 'react';
-import './../../less/style.less';
-import './property.less';
+import CSSModules from 'react-css-modules';
+import styles from './property.less';
 
 function Property(props) {
     const { color, logo, id, mainImage, price } = props;
     return (
         <>
-            <div className="results-header" style={{ backgroundColor: color }}>
-                <span className="logo">
-                    <img className="logo-img" src={logo} alt="logo" />
+            <div styleName="results-header" style={{ backgroundColor: color }}>
+                <span styleName="logo">
+                    <img styleName="logo-img" src={logo} alt="logo" />
                 </span>
-                <span className="id">ID:{id}</span>
+                <span styleName="id">ID:{id}</span>
             </div>
-            <div className="results-content">
-                <img className="content-img" src={mainImage} alt="image" />
+            <div styleName="results-content">
+                <img styleName="content-img" src={mainImage} alt="image" />
             </div>
-            <div className="results-footer">
+            <div styleName="results-footer">
                 <span>{price}</span>
             </div>
         </>
     );
 }
-export default Property;
+export default CSSModules(Property, styles);
