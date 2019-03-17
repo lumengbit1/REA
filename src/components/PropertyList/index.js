@@ -1,18 +1,12 @@
 import React, { useEffect } from 'react';
 import { inject } from 'mobx-react';
 import { observer } from 'mobx-react-lite';
-import '../../less/style.less';
-import './card.less';
+import CSSModules from 'react-css-modules';
+import styles from './propertyList.less';
 import Loadable from 'react-loadable';
-import classNames from 'classnames';
 
-function Card({ rootStore, area }) {
+function PropertyList({ rootStore, area, btnText, btnClass }) {
     const propertyData = area === 'results' ? rootStore.formStore.resultsData : rootStore.formStore.savedData;
-    const btnText = area === 'results' ? 'Add Property' : 'Remove Property';
-    const btnClass = classNames({
-        btnresults: area === 'results',
-        btnsaved: area === 'saved'
-    });
     const LoadableProperty = Loadable({
         loader: () => import('./../Property'),
         loading() {
@@ -32,7 +26,7 @@ function Card({ rootStore, area }) {
         <>
             {propertyData.map(item => {
                 return (
-                    <div className="property">
+                    <div styleName="property">
                         <LoadableProperty
                             price={item.price}
                             color={item.agency.brandingColors.primary}
@@ -42,7 +36,7 @@ function Card({ rootStore, area }) {
                         />
                         <button
                             data-testid="test"
-                            className={btnClass}
+                            styleName={btnClass}
                             onClick={() => {
                                 onClick(item.id);
                             }}
@@ -55,4 +49,4 @@ function Card({ rootStore, area }) {
         </>
     );
 }
-export default inject('rootStore')(observer(Card));
+export default inject('rootStore')(observer(CSSModules(PropertyList, styles)));

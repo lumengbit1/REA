@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { MemoryRouter } from 'react-router-dom';
-import Root from './../router/Routers';
+import Root from '../router/Routers';
 import RootStore from '../stores/RootStore';
 import { Provider } from 'mobx-react';
 
@@ -18,7 +18,6 @@ describe('Route Test', () => {
                 </Provider>
             )
             .toJSON();
-
         expect(component).toMatchSnapshot();
     });
 });
