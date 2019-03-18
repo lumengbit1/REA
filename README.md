@@ -71,6 +71,10 @@
  ┗ 📜README.md
 ```
 
+## Issues
+
+The Logo's hyperlink in the mock data have some problems, couldn't get logo images from the link.
+
 ## Change Log
 
 ### Testing
