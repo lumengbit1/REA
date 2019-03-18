@@ -119,8 +119,8 @@
             "node"
         ],
         "watchPlugins": [
-            "D:\\jesttest\\mobxtest\\node_modules\\jest-watch-typeahead\\filename.js",
-            "D:\\jesttest\\mobxtest\\node_modules\\jest-watch-typeahead\\testname.js"
+            "jest-watch-typeahead\\filename.js",
+            "jest-watch-typeahead\\testname.js"
         ]
     },
     "babel": {
