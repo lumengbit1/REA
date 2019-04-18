@@ -23,6 +23,8 @@ class FormStore {
         this.savedData.splice(this.savedData.indexOf(this.savedData.find(item => item.id === id)), 1);
     }
 
+    @action
+    filterFn(price) {}
     getData = flow(function*() {
         const api = '/test_data/data.json';
         try {

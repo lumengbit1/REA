@@ -3,27 +3,27 @@
 exports[`Render Test case: expect rendering correct 1`] = `
 <div>
   <div
-    class="home-page"
+    class="homePage"
   >
     <div
-      class="results-area"
+      class="resultsArea"
     >
       <div
         class="title"
       >
-        'Results'
+        Results
       </div>
       <div
         class="block"
       />
     </div>
     <div
-      class="saved-properties-area"
+      class="savedPropertiesArea"
     >
       <div
         class="title"
       >
-        'Saved Properties'
+        Saved Properties
       </div>
       <div
         class="block"
