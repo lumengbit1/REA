@@ -117,8 +117,8 @@
             "node"
         ],
         "watchPlugins": [
-            "jest-watch-typeahead\filename.js",
-            "jest-watch-typeahead\testname.js"
+            "jest-watch-typeahead\\filename.js",
+            "jest-watch-typeahead\\testname.js"
         ]
     },
     "babel": {
