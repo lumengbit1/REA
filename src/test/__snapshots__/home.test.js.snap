@@ -2,32 +2,66 @@
 
 exports[`Render Test case: expect rendering correct 1`] = `
 <div>
-  <div
-    class="homePage"
-  >
+  <div>
     <div
-      class="resultsArea"
+      class="header"
     >
       <div
-        class="title"
+        class="header"
       >
-        Results
+        <label
+          class="priceLabel"
+          for="price"
+        >
+          Price:
+        </label>
+        <input
+          data-testid="test"
+          id="price"
+          name="priceInput"
+          type="text"
+        />
+        <button
+          class="headerBtn"
+          data-testid="choose"
+        >
+          Price Choose
+        </button>
+        <button
+          class="headerBtn"
+          data-testid="reset"
+        >
+          Reset
+        </button>
       </div>
-      <div
-        class="block"
-      />
     </div>
     <div
-      class="savedPropertiesArea"
+      class="homePage"
     >
       <div
-        class="title"
+        class="resultsArea"
       >
-        Saved Properties
+        <div
+          class="title"
+        >
+          Results
+        </div>
+        <div
+          class="block"
+        />
       </div>
       <div
-        class="block"
-      />
+        class="savedPropertiesArea"
+      >
+        <div
+          class="title"
+        >
+          Saved Properties
+        </div>
+        <div
+          class="block"
+        />
+      </div>
     </div>
   </div>
 </div>

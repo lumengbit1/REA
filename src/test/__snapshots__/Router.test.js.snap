@@ -5,32 +5,69 @@ exports[`Route Test Route Test 1`] = `
   <div
     className="App"
   >
-    <div
-      className="homePage"
-    >
+    <div>
       <div
-        className="resultsArea"
+        className="header"
       >
         <div
-          className="title"
+          className="header"
         >
-          Results
+          <label
+            className="priceLabel"
+            htmlFor="price"
+          >
+            Price:
+          </label>
+          <input
+            data-testid="test"
+            id="price"
+            name="priceInput"
+            onChange={[Function]}
+            type="text"
+          />
+          <button
+            className="headerBtn"
+            data-testid="choose"
+            onClick={[Function]}
+          >
+            Price Choose
+          </button>
+          <button
+            className="headerBtn"
+            data-testid="reset"
+            onClick={[Function]}
+          >
+            Reset
+          </button>
         </div>
-        <div
-          className="block"
-        />
       </div>
       <div
-        className="savedPropertiesArea"
+        className="homePage"
       >
         <div
-          className="title"
+          className="resultsArea"
         >
-          Saved Properties
+          <div
+            className="title"
+          >
+            Results
+          </div>
+          <div
+            className="block"
+          />
         </div>
         <div
-          className="block"
-        />
+          className="savedPropertiesArea"
+        >
+          <div
+            className="title"
+          >
+            Saved Properties
+          </div>
+          <div
+            className="block"
+          />
+        </div>
       </div>
     </div>
   </div>
